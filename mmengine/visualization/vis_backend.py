@@ -439,7 +439,7 @@ class WandbVisBackend(BaseVisBackend):
         allow_val_change = self._init_kwargs.get('allow_val_change', False)
         self._wandb.config.update(
             dict(config), allow_val_change=allow_val_change)
-        self._wandb.run.log_code(name=self._log_code_name)
+        # self._wandb.run.log_code(name=self._log_code_name)
 
     @force_init_env
     def add_graph(self, model: torch.nn.Module, data_batch: Sequence[dict],
